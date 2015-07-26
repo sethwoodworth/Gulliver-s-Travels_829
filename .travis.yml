@@ -5,15 +5,14 @@ before_install:
 script:
 - VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yml'); puts meta['_version'];"`
 - git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
-- asciidoctor -a toc,version=$VERSION -b xhtml5 -d book -T ./asciidoctor-htmlbook/htmlbook-autogen/
-  -d book book.asciidoc -o book.html
-- git clone https://github.com/gitenberg-dev/HTMLBook
-- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl
-  book.html
-- cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.png OEBPS/cover.png
-- zip -rX Gulliver.epub mimetype
-- zip -rX Gulliver.epub OEBPS/ META-INF/
+- asciidoctor -a toc,version=$VERSION -b xhtml5 -d book -T ./asciidoctor-htmlbook/htmlbook-autogen/ book.asciidoc -o book.html
+# - git clone https://github.com/gitenberg-dev/HTMLBook
+# - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl
+#   book.html
+# - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
+# - cp cover.png OEBPS/cover.png
+# - zip -rX Gulliver.epub mimetype
+# - zip -rX Gulliver.epub OEBPS/ META-INF/
 addons:
   apt:
     packages:
@@ -26,6 +25,6 @@ deploy:
   provider: releases
   api_key:
     secure: YojUS+G00pFehDc58z4t+3mibS6unkZHUd/YTQmcT8aos4FCLZN99IRFATrixeNxLQ95VeHRSE08MJjkY1+fTqYscYmPjuq3CsnSRWkl93C8kZMCDD3tuT1idDmJxGNEPtU015/CM7iaU3TbkFVaXxFqQme4yXULPtz4B4rP7FsQGncbzq2PtQHlioGhnM3xUUZaktgADTiF1maT26TI5tdjkGUfR7Pysy2805GChAGhKNPXPWVgvc9B6dyNHW8MxXd+3GWdYuuz7ATqlw1t7bZsKfC8fgSlApLoLNMLkNxhi0Axh9UQaVIE3Adv9TjbQaqDkk3GRXjz/6PrpeNTzLW0D/WAL0LbvW/NbYGbP9jEW4nqC4t/W9jo/HLXXSi4qN+r8xEs8FijIdizu3nX1Ap4t2AfXW5zyT07D0tI+4Ue3xnsO6LFSGSSlrFErHg/pJ9UcU4Wsgba9cI0YoiZiW2j5GLHtEGp/YeRQwKfmwNKl2D73rKppMcldtBKCoarysHfdcprNRkHN14YSbYWzX4GCZblfUPFnud+/nNaCtNyewYRBYzw+jiPeAWaSwpl0TILGcp/lrIHKXuXfD2wZSuxDNkzGXDXZ0OBGYvsV6poxS3iPvzlGPgJ6bCmJ7Pcd84fyCdgcpkn0tNU/kypz4Gc47Ef6oSg9qa7lb4leng=
-  file: Gulliver.epub
+  file: book.asciidoc
   on:
     repo: sethwoodworth/Gulliver-s-Travels_829
