@@ -1,8 +1,7 @@
-= {title}
+= Gulliver's Travels
 Jonathan Swift
-v{version}
 
-{title}
+
 Transcribed from the 1892 George Bell and Sons edition by David Price,
 email ccx074@pglaf.org
 
@@ -13,12 +12,11 @@ GULLIVER’S TRAVELS +
 BY JONATHAN SWIFT, D.D., +
  dean of st. patrick’s, dublin.
 
-__First published in__ 1726–7.
+[__First published in__ 1726–7.]
 
 == THE PUBLISHER TO THE READER.
 
-{title}
-__As given in the original edition__.
+[__As given in the original edition__.]
 
 The author of these Travels, Mr. Lemuel Gulliver, is my ancient and
 intimate friend; there is likewise some relation between us on the
@@ -9706,4 +9704,3 @@ including how to make donations to the Project Gutenberg Literary
 Archive Foundation, how to help produce our new eBooks, and how to
 subscribe to our email newsletter to hear about new eBooks.
 --------------------------------------------------------------------------
-
