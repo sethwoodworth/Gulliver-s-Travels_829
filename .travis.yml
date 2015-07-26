@@ -2,7 +2,7 @@ language: ruby
 before_install:
 - gem install asciidoctor tilt
 script:
-  - TEST = `python -c "import yaml; print yaml.load(open('metadata.yml','r').read())['_version']"`
+  - TEST=`python -c "import yaml; print yaml.load(open('metadata.yml','r').read())['_version']"`
   - echo $TEST
   # - git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
   # - asciidoctor -a toc -b xhtml5 -d book -T ./asciidoctor-htmlbook/htmlbook-autogen/
