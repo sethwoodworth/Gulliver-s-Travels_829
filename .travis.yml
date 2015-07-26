@@ -1,8 +1,9 @@
 language: ruby
+sudo_required: true
 before_install:
 - gem install asciidoctor tilt
 script:
-  - pip install PyYAML==3.11
+  - sudo pip install PyYAML==3.11
   - TEST=`python -c "import yaml; print yaml.load(open('metadata.yml','r').read())['_version']"`
   - echo $TEST
   # - git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
