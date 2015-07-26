@@ -1,6 +1,6 @@
 = Gulliver's Travels
 Jonathan Swift
-
+v{version}
 
 Transcribed from the 1892 George Bell and Sons edition by David Price,
 email ccx074@pglaf.org

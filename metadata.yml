@@ -1,5 +1,5 @@
-# THIS IS NOT THE RIGHT YAML FILE
-_version: 0.0.9
+# THIS IS NOT THE RIGHT YAML FILE DATA. REPLACE THIS BEFORE USING IN PRODUCTION
+_version: 0.0.10
 contributor:
   illustrator:
     agent_name: Kemble, E. W. (Edward Windsor)
