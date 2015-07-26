@@ -15,7 +15,6 @@ script:
 - mv ./images ./OEBPS/
 - zip -rX Gulliver.epub mimetype
 - zip -rX Gulliver.epub OEBPS/ META-INF/
-- zip -rX Gulliver.epub OEBPS/images/
 addons:
   apt:
     packages:
