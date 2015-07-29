@@ -12,8 +12,8 @@ script:
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
 - cp cover.jpg OEBPS/cover.jpg
-- zip -rX Gulliver.epub mimetype
-- zip -rX Gulliver.epub OEBPS/ META-INF/
+- zip -rX book.epub mimetype
+- zip -rX book.epub OEBPS/ META-INF/
 - mv book.epub Gullivers-Travels.epub
 addons:
   apt:
