@@ -2,6 +2,9 @@
 Jonathan Swift
 v{version}
 
+
+include::copyright.asciidoc[]
+
 Transcribed from the 1892 George Bell and Sons edition by David Price,
 email ccx074@pglaf.org
 

@@ -1,0 +1,23 @@
+[colophon]
+== Copyright
+
+This work is in the public domain.
+
+The GITenberg Project. GITenberg.org
+
+ifdef::<cover_attrib>[]
+Cover provided by Recovering the Classics
+
+Artist: Kjell Roger, (C) 2013
+
+Made available under a Creative Commons Attribution-NonCommercial 4.0 license
+
+https://creativecommons.org/licenses/by-nc/4.0/
+
+enddef::<cover_attrib>[]
+
+If you find any issues with this work, please report them at
+https://github.com/GITenberg/Adventures-of-Huckleberry-Finn_76/issues
+
+
+
