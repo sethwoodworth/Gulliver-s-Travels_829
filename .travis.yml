@@ -3,7 +3,7 @@ sudo_required: true
 before_install:
 - gem install asciidoctor tilt
 script:
-- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yml'); puts meta['_version'];"`
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
 - TITLE=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['title'];"`
 - COVER_ATTRIBUTION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['covers'][0]['attribution'];"`; echo "yes"
 - git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
