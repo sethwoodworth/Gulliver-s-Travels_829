@@ -5,9 +5,9 @@ before_install:
 script:
 - VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
 - TITLE=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['title'];"`
-- COVER_ATTRIBUTION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['covers'][0]['attribution'];"`; echo "yes"
+- COVER_ATTRIBUTION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['covers'][0]['attribution'];"`
 - git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
-- asciidoctor -a toc,version=$VERSION -b xhtml5 -d book book.asciidoc -o book.html
+- asciidoctor -a toc,version=$VERSION,cover_attrib=$COVER_ATTRIBUTION -b xhtml5 -d book book.asciidoc -o book.html
 - git clone https://github.com/gitenberg-dev/HTMLBook
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
